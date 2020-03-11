@@ -1,0 +1,14 @@
+import React from "react";
+import { connect } from "dva";
+import { PageHeaderWrapper } from "@ant-design/pro-layout";
+mport { ConnectProps } from "@/models/connect";
+
+interface XXXXProps extends ConnectProps {
+
+}
+const XXXX: React.FC<XXXXProps> = props => {
+
+    return (<PageHeaderWrapper></PageHeaderWrapper>)
+}
+
+export default connect()(XXXX);

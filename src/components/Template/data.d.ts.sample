@@ -1,0 +1,10 @@
+export interface XXXXXXQuery {
+    id?: string
+    title?: string
+    author: string
+    desc: string
+    content: string
+    thumb: string
+    state: number
+
+}

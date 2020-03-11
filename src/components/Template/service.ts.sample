@@ -1,0 +1,37 @@
+
+import request from '@/utils/request'
+import { XXXXXXQuery } from './data.d'
+
+export async function index(params?: XXXXXXQuery & { current?: number, pageSize?: number }) {
+    return await request('/api/XXXXXXs', {
+        params
+    })
+}
+
+export async function create(params: Partial<XXXXXXQuery>) {
+    return await request('/api/XXXXXXss', {
+        data: params,
+        method: 'post'
+    })
+}
+
+export async function update(key: string, params: Partial<XXXXXXQuery>) {
+    if (!key) return;
+    return await request('/api/XXXXXXss/' + key, {
+        data: params,
+        method: 'put'
+    })
+}
+
+
+export async function destory(key: string) {
+    if (!key) return;
+    return await request('/api/XXXXXXs/' + key, {
+        method: 'delete'
+    })
+}
+
+export async function show(key: string) {
+    if (!key) return;
+    return await request('/api/XXXXXXs/' + key);
+}
