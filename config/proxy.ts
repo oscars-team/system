@@ -8,7 +8,7 @@
 export default {
   dev: {
     '/api/': {
-      target: 'http://127.0.0.1:7001',
+      target: 'http://api.system.artibition.cn',
       // target: 'http://xymbtc.vicp.net',
       changeOrigin: true,
       pathRewrite: { '^': '' },

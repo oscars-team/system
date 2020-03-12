@@ -4,6 +4,7 @@ const io = require('socket.io-client')
 interface SocketLayoutProps {
     server: string
     nsp: string
+    autoConnect?: boolean
     onConnect?: (socket: any, args: any) => void
     onDisconnect?: () => void
     onData?: () => void
@@ -11,9 +12,10 @@ interface SocketLayoutProps {
 
 const SocketLayout: React.FC<SocketLayoutProps> = (props) => {
 
-    const { server, nsp, onConnect, onDisconnect, children } = props
+    const { server, nsp, onConnect, onDisconnect, children, autoConnect } = props
 
     useEffect(() => {
+        if (!autoConnect) return;
         const socket = io(`${server}${nsp}`, {
             query: {
                 room: 'wxauth',

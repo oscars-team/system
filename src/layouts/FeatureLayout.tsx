@@ -122,7 +122,8 @@ const FeatureLayout: React.FC<FeatureLayoutProps> = props => {
 
     return (
         <SocketLayout
-            server="http://127.0.0.1:7001"
+            server="http://api.system.artibition.cn"
+            autoConnect={false}
             nsp="/feature"
             onConnect={(socket, args) => { setSocketToken(args); }}
             onDisconnect={() => { console.log('disconnect'); }}

@@ -278,7 +278,7 @@ export default {
     },
   },
   manifest: {
-    basePath: '/',
+    basePath: '/app',
   },
   proxy: proxy[REACT_APP_ENV || 'dev'],
   chainWebpack: webpackPlugin,

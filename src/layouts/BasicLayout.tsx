@@ -137,7 +137,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
   useEffect(() => {
     // 这里是一个演示用法
     // 真实项目中建议使用 dva dispatch 或者 umi-request
-    fetch('/api/menus?id=5e53f10669a9603248d60bbd')
+    fetch('/api/menus?id=5e692c7900f0a1114421369b')
       .then(response => response.json())
       .then(data => {
         setMenuData(data || []);
